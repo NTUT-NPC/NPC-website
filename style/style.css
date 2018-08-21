@@ -52,3 +52,25 @@ footer {
 	text-align: center;
 	line-height: 100px;
 }
+
+
+.InheritImg {
+	width: 100%;
+}
+
+.Introduction {
+	background-color: #e0e0e0;
+}
+
+.w-40 {
+	width: 45%;
+	margin: 0;
+	display: inline-block;
+}
+
+.w-60 {
+	width: 55%;
+	margin: 0;
+	display: inline-block;
+}
+
