@@ -36,7 +36,7 @@ $(window).resize(function() {
 
 //the slid click
  $('.contant').click(function(){
-        $('html,body').animate({scrollTop:$('#contant').offset().top}, {duration: 2000, easing: 'easeOutCubic'});
+        $('html,body').animate({scrollTop:$('#contant').offset().top}, 1200);
     });
 
 
