@@ -10,7 +10,7 @@ function CheckSize(windowsize) {
 
 CheckSize(windowsize);
 
-$(window).resize(function() {
+$(window).resize(function () {
 	var windowsize = $(window).width();
 	CheckSize(windowsize);
 });

@@ -38,5 +38,3 @@ $(window).resize(function () {
 $('.contant').click(function () {
 	$('html,body').animate({ scrollTop: $('#contant').offset().top }, 1200);
 });
-
-
