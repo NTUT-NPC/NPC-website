@@ -29,14 +29,14 @@ function CheckSize(windowsize) {
 
 CheckSize(windowsize);
 
-$(window).resize(function() {
+$(window).resize(function () {
 	var windowsize = $(window).width();
 	CheckSize(windowsize);
 });
 
 //the slid click
- $('.contant').click(function(){
-        $('html,body').animate({scrollTop:$('#contant').offset().top}, 1200);
-    });
+$('.contant').click(function () {
+	$('html,body').animate({ scrollTop: $('#contant').offset().top }, 1200);
+});
 
 
