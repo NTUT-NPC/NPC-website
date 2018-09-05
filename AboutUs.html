@@ -19,9 +19,9 @@
 
 <body>
 	<div class="parallax-window" data-parallax="scroll" data-image-src="img/test.jpg">
-		<nav class="navbar navbar-default navbar-expand-lg bg-transparent navbar-expand-md">
+		<nav class="navbar navbar-default navbar-expand-lg" style="background-color: #000">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="./index.html">
 					<img src="img/logo.png" width="50px">
 				</a>
 				<!-- Hamburger button-->
@@ -53,9 +53,94 @@
 			</div>
 		</nav>
 	</div>
-	<div class="p-5">
-		<div class="container mt-3" id="ClubNumber">
+
+	<!-- About -->
+	<div class="commission pt-5 pl-5 pr-5">
+		<div class="container">
+			<h1>使命</h1>
+			<hr class="mb-5 commissionHr" size="5"/>
+			<p>讓我們推動 北科程式設計 的學習風潮</p>
+			<p>使更多人了解 程式 的趣味</p>
+			<p>扭轉以往大家對 學習程式很困難 的迷思</p>
+			<p>並提供許多管道 給想要學習的你</p>
+			<p>最後讓我們一起 繪出只屬於北科人的程式夢想藍圖</p>
+		</div>
+	</div>
+
+	<!-- organizers of the NPC club -->
+	<div class="pr-5 pl-5 pt-4 pb-5">
+		<div class="container mt-3">
 			<h1>社團幹部</h1>
+			<hr class="mb-5 organizersHr" size="5" />
+			<div class="row px-3">
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="number_img text-center">
+						<img class="img-thumbnail img" src="img/testsuqre.jpg" width="100" style="border-radius: 50%">
+						<p class="p-0">Name</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- numbers of the NPC club -->
+	<div class="pr-5 pl-5 pt-4 pb-5">
+		<div class="container mt-3">
+			<h1>社團成員</h1>
+			<hr class="mb-5 numbersHr" size="5" />
 			<div class="row px-3">
 				<div class="col">
 					<div class="number_img text-center">
@@ -121,13 +206,19 @@
 		</div>
 	</div>
 	<div id="contact" class="p-5">
-		<div class="link1 text-center">
+		<div class="ContactLink text-center">
 			<h1>Follow Us</h1>
-			<button class="mybtn">Facebook</button>
-			<button class="mybtn">NPC CTF</button>
+			<button class="mybtn" value="Facebook">Facebook</button>
+			<button class="mybtn" value="CTF">NPC CTF</button>
 		</div>
 	</div>
+	<footer>
+		<p class="m-0" style="font-size: 0.9em">&copy; 2018 by NTUT Programming Club</p>
+	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script src="https:	//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 	<script src="js/index.js"></script>

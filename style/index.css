@@ -1,37 +1,61 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-border-radius: 5px;
+	border-radius: 10px;
+	margin:5px 0 5px 0;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: rgba(155, 155, 155, 0.9);
+}
+/* scrollbar end*/
+
+/* font */
 @font-face {
-	font-family: a;
+	font-family: Qt;
 	src: url('../fonts/Quentin.ttf');
 }
 
+
 @font-face {
-	font-family: b;
+	font-family: NotoRegular;
 	src: url('../fonts/NotoSans-Regular.ttf');
 }
 
+.yahey {
+	font-family: 'cwTeXYen', sans-serif;
+}
+
+.Noto {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+/* font end*/
+
+/* Some setting */
 body, footer {
-	font-family: b;
+	font-family: Qt;
 }
 
 a {
 	color: white;
 }
 
+.displayNone {
+	display: none;!important
+}
+/* Some setting end */
+
+/* navigation */
 navbar-brand a img {
 	width: 100px;
-}
-
-.LineBorder li a {
-	border-width: 1px;
-	border-color: rgb(2 55,255,255);
-	border-style: solid;
-	margin-right: 20px;
-	margin-left: 15px;
-	width: 10vw;
-	min-width: 120px;
-	max-width: 150px;
-	
 }
 
 .parallax-window {
@@ -40,10 +64,115 @@ navbar-brand a img {
     font-size: 0.9em;
 }
 
-.navbar-toggler-icon {
-	    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+.navBlack {
+	background-color: black;
 }
 
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
+.LineBorder li a {
+	border-width: 1px;
+	border-color: rgb(255,255,255);
+	border-style: solid;
+	margin-right: 20px;
+	margin-left: 15px;
+	width: 10vw;
+	min-width: 120px;
+	max-width: 150px;	
+}
+
+.LineBorder li a:hover {
+	background-color: rgba(255,255,255,.9);
+	transition: 0.7s;
+	color: black;
+}
+
+.hamburger:hover {
+	font-size: 1.5em;
+	color: white;
+	transition: 0.8s;
+}
+/* navigation end */
+
+/* title */
+.titleHr {
+  border: none;
+  margin: 0;
+  height: 5px;
+  width: 80%;
+  background-color: #ff6f48;
+}
+
+.blankLeaving {
+	height: 5vh;
+}
+
+.parallax-window-50vh {
+    min-height: 500px;
+    background: transparent;
+    font-size: 0.9em;
+	min-height: 500px;
+	height: 90vh
+}
+
+.parallax-window-50vh div {
+	color: #fff;
+	background-color: #1a1b21;
+	width: 45vw;
+	opacity: 0.9;
+	min-height: 500px;
+	height: 90vh;
+}
+
+.RWDTitle {
+	color: #fff;
+	background-color: #1a1b21;
+	opacity: 0.9;
+	min-height: 500px;
+	height: 70vh;
+}
+
+.RWDTitle p {
+	margin-left: 10vw;
+}
+/* title end */
+
+/* content */
+.row div {
+	padding: 0;
+}
+
+.all {  /* all is meaning the We are NPC, Profile and News */
+	background-color: #e0e0e0;
+}
+
+.all .img:hover {
+	/* jump out of the picture */
+	background-image: url("../img/test.jpg");
+	background-size: 100%;
+}
+
+.widthSize1 {
+	width: 54%;
+	margin: 0;
+	display: inline-block;
+}
+
+.widthSize2 {
+	width: 44%;
+	margin: 0;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.InheritImg {
+	width: 100%;
+}
+/* content end */
+
+/* contact */
 footer {
 	background-color: #000;
 	height: 100px;
@@ -52,55 +181,8 @@ footer {
 	line-height: 100px;
 }
 
-.InheritImg {
-	width: 100%;
-}
-
-.all {
-	background-color: #e0e0e0;
-}
-
-.all .img:hover {
-	/*the picture*/
-	background-image: url("../img/test.jpg");
-	background-size: 100%;
-}
-
-.w-40 {
-	width: 54%;
-	margin: 0;
-	display: inline-block;
-}
-
-.w-60 {
-	width: 44%;
-	margin: 0;
-	vertical-align: middle;
-	display: inline-block;
-}
-
-.displayNone {
-	display: none;!important
-}
-
-.em8 {
-	font-size: 1.4em;
-}
-
-.LineBorder li :hover {
-	background-color: rgba(255,255,255,.9);
-	transition: 0.7s;
-	color: black;
-}
-
-.row div {
-	padding: 0;
-}
-
-.link1 {
+.ContactLink {
 	color: #ff6f48;
 	background-color: white;
 }
-
-
-
+/* contact end */
