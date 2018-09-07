@@ -1,8 +1,5 @@
 var w = $(window).width();
 
-
-
-
 // the w judge
 function CheckSize(w) {
 	if (w < 486) {
