@@ -16,7 +16,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
-  width: 240px;
+  width: 200px;
   min-width: 50px;
 }
 .mybtn:before, .mybtn:after {
