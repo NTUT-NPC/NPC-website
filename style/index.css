@@ -18,26 +18,6 @@
 }
 /* scrollbar end*/
 
-/* font */
-@font-face {
-	font-family: Qt;
-	src: url('../fonts/Quentin.ttf');
-}
-
-
-@font-face {
-	font-family: NotoRegular;
-	src: url('../fonts/NotoSans-Regular.ttf');
-}
-
-.yahey {
-	font-family: 'cwTeXYen', sans-serif;
-}
-
-.Noto {
-	font-family: 'Noto Sans TC', sans-serif;
-}
-/* font end*/
 
 /* Some setting */
 body, footer {
