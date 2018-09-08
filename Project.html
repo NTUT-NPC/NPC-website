@@ -10,11 +10,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
 	<!-- my css -->
-	<link rel="stylesheet" type="text/css" href="style/AboutUs.css">
+	<link rel="stylesheet" type="text/css" href="style/button.min.css">
+	<link rel="stylesheet" type="text/css" href="style/Project.min.css">
+	<link rel="stylesheet" type="text/css" href="style/AboutUs.min.css">
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
 	 crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style/button.css">
+	
 </head>
 
 <script type="text/javascript">
@@ -27,7 +29,7 @@ function refresh() {
 
 <body onresize="refresh()">
 	<div class="parallax-window" data-parallax="scroll" data-image-src="img/Attach_RWD.jpg">
-		<nav class="navbar navbar-default navbar-expand-lg" style="background-color: #000">
+		<nav class="navbar navbar-default navbar-expand-lg fixed-top" style="background-color: #000">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">
 					<img src="img/logo.png" width="50px">
@@ -58,11 +60,64 @@ function refresh() {
 			</div>
 		</nav>
 	</div>
-	<!-- youtube API -->
-	<!-- popularize -->
-	<div class="text-center mt-5">
-		<img src="img/promote.png">
+	<!-- Project -->
+	<div class="container">
+		<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
+			<img class="card-img-top" src="./img/github.png" height="250px">
+			<div class="card-body">
+				<h1 class="m-0 text-center">NPC - website</h1>
+				<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs1_1">了解更多</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="dialogs1_1" tabindex="-1" role="dialog" aria-labelledby="dialogs1_2" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered dialog-w" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="dialogs1_2">社團網站 - GitHub</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body text-left">
+				        <hr class="teadateHr">
+				        <img src="img/NPC-website.png">
+				        <hr class="teadateHr_invert">
+						<p><a href="https://github.com/darkfanxing/NPC-website">- NPC 社團網站 -</a></p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
+			<img class="card-img-top" src="./img/github.png" height="250px">
+			<div class="card-body">
+				<h1 class="m-0 text-center">Line bot</h1>
+				<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs2_1">了解更多</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="dialogs2_1" tabindex="-1" role="dialog" aria-labelledby="dialogs2_2" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered dialog-w" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="dialogs2_2">Line bot</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <hr class="teadateHr">
+				        <img src="img/line-bot.png">
+				        <hr class="teadateHr_invert">
+				        <p><a href="https://github.com/yaoandy107/line-bot-tutorial">- The Line bot tutorial -</a></p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<button><a href="test/index.html">click</a></button>
 
 	<div id="contant" class="p-5">
 		<div class="ContactLink text-center">
@@ -75,12 +130,15 @@ function refresh() {
 		<p class="m-0" style="font-size: 0.9em">&copy; 2018 by NTUT Programming Club</p>
 	</footer>
 
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!-- parallax.js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-	<script src="js/index.js"></script>
+	<!-- my script -->
+	<script src="js/main.min.js"></script>
 </body>
 
 </html>
