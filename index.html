@@ -12,6 +12,25 @@
 			<link rel="stylesheet" type="text/css" href="style/index.min.css">
 			<link rel="stylesheet" type="text/css" href="style/button.min.css">
 		</head>
+		<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		var player;
+		function onYouTubeIframeAPIReady() {
+		player = new YT.Player('ytplayer', {
+		events: {
+		'onReady': onPlayerReady
+		}
+		});
+		}
+		function onPlayerReady() {
+		player.playVideo();
+		// Mute!
+		player.mute();
+		}
+		</script>
 		<body>
 			<!-- the navigation -->
 			<nav class="navbar navbar-default navbar-expand-md navBlack fixed-top">
@@ -47,10 +66,10 @@
 			<div style="height: 76px; background-color: black;"></div>
 			<div class="pb-5 pt-4" style="background-color: black;">
 				<div class="w-75 mx-auto">
-				<div class="embed-responsive embed-responsive-16by9 text-center">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5yb_9c6AP8w?rel=0&autoplay=1&loop=1&playlist=5yb_9c6AP8w" volumn="0"></iframe>
+					<div class="embed-responsive embed-responsive-16by9 text-center">
+						<iframe id="ytplayer" class="embed-responsive-item" src="https://www.youtube.com/embed/5yb_9c6AP8w?rel=0&amp;html5-1&amp;enablejsapi=1&amp;autoplay=1&loop=1&playlist=5yb_9c6AP8w"></iframe>
+					</div>
 				</div>
-			</div>
 			</div>
 			<!-- information -->
 			<div class="container-fluid p-5" id="information">
