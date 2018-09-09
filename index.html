@@ -1,322 +1,335 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link rel="shortcut icon" href="./img/favicon.ico">
-	<title>北科程式設計研究社</title>
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	 crossorigin="anonymous">
-	<!-- my css -->
-	<link rel="stylesheet" type="text/css" href="style/index.min.css">
-	<link rel="stylesheet" type="text/css" href="style/button.min.css">
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-	 crossorigin="anonymous">
-</head>
-<script type="text/javascript">
-function refresh() {
-	setTimeout(function() {
-		location.reload();
-	}, 100);
-}
-</script>
-<body onresize="refresh()">
-	<!-- the picture -->
-	<div class="parallax-window" data-parallax="scroll" data-image-src="./img/Attach_RWD.jpg">
-		<nav class="navbar navbar-default navbar-expand-md navBlack fixed-top">
-			<div class="container">
-				<a class="navbar-brand" href="index.html">
-					<img src="img/logo.png" width="50px">
-				</a>
-				<!-- Hamburger button-->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem"
-				 aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<!-- humburger Menu -->
-				<div class="collapse navbar-collapse" id="navbarItem">
-					<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
-						<li class="nav-item active text-center">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li class="nav-item text-center">
-							<a class="nav-link" href="AboutUs.html">About us</a>
-						</li>
-						<!-- use dropdown Menu -->
-						<li class="nav-item text-center">
-							<a class="nav-link" href="Project.html">Project</a>
-						</li>
-						<li class="nav-item text-center">
-							<a class="nav-link" href="Course.html">Course</a>
-						</li>
-					</ul>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="./img/favicon.ico">
+		<title>北科程式設計研究社</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+			crossorigin="anonymous">
+			<!-- my css -->
+			<link rel="stylesheet" type="text/css" href="style/index.min.css">
+			<link rel="stylesheet" type="text/css" href="style/button.min.css">
+			<!-- fontawesome -->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+				crossorigin="anonymous">
+			</head>
+			<script type="text/javascript">
+			var preWidth = window.innerWidth
+				|| document.documentElement.clientWidth
+				|| document.body.clientWidth;
+			function refresh() {
+				var newWidth = window.innerWidth
+				var judgeNew;
+				var judgePre;
+				function judgeWidth (Width) {
+					if (Width >= 900) {
+						return "A";
+					} else if (newWidth > 700 && newWidth < 900) {
+						return "B";
+					} else if (newWidth < 550 && newWidth >= 700) {
+						return "C";
+					} else {
+						return "D";
+					}
+				}
+				
+				judgeNew = judgeWidth(newWidth);
+				judgePre = judgeWidth(preWidth);
+				
+				if (judgeNew != judgePre) {
+					location.reload();
+				}
+				preWidth = newWidth;
+			}
+			</script>
+			<body onresize="refresh()">
+				<!-- the picture -->
+				<div class="parallax-window" data-parallax="scroll" data-image-src="./img/Attach_RWD.jpg">
+					<nav class="navbar navbar-default navbar-expand-md navBlack fixed-top">
+						<div class="container">
+							<a class="navbar-brand" href="index.html">
+								<img src="img/logo.png" width="50px">
+							</a>
+							<!-- Hamburger button-->
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+							<!-- humburger Menu -->
+							<div class="collapse navbar-collapse" id="navbarItem">
+								<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
+									<li class="nav-item active text-center">
+										<a class="nav-link" href="index.html">Home</a>
+									</li>
+									<li class="nav-item text-center">
+										<a class="nav-link" href="AboutUs.html">About us</a>
+									</li>
+									<!-- use dropdown Menu -->
+									<li class="nav-item text-center">
+										<a class="nav-link" href="Project.html">Project</a>
+									</li>
+									<li class="nav-item text-center">
+										<a class="nav-link" href="Course.html">Course</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
 				</div>
-			</div>
-		</nav>
-	</div>
-	<!-- information -->
-	<div class="container-fluid p-5" id="information">
-		<h1>活動搶先看</h1>
-		<hr class="titleHr"/>
-		<div class="text-center">
-			<!-- tea -->
-			<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-				<img class="card-img-top" src="./img/tea.jpg" height="250px">
-				<div class="card-body">
-					<h1 class="m-0">新生茶會</h1>
-					<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs1_1">了解更多</button>
-
-					<!-- Modal -->
-					<div class="modal fade" id="dialogs1_1" tabindex="-1" role="dialog" aria-labelledby="dialogs1_2" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="dialogs1_2">新生茶會</h5>
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					          <span aria-hidden="true">&times;</span>
-					        </button>
-					      </div>
-					      <div class="modal-body text-left">
-					        <p>
-					        Hey! 聽說...<br>
-					        你還在猶豫要參加哪個社團嗎？<br>
-					        想要踏入程式領域卻覺得自學難以入門嗎？<br>
-					        沒關係！那就來我們的新生茶會，<br>
-					        一起了解 北科程式設計研究社 到底都在做些什麼事情吧！<br>
-					    	</p>
-					        <hr class="teadateHr mb-5">
-					        <p>日期：107/9/18 (Tue.)</p>
-					       	<p>入場時間：p.m. 6:00 - 6:30</p>
-					       	<p>開始時間：p.m. 6:30</p>
-					       	<p>地點：目前未定</p>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-			<!-- video -->
-			<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-				<img class="card-img-top" src="./img/video.png" height="250px">
-				<div class="card-body">
-					<h1 class="m-0">招生影片</h1>
-					<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs2_1">立即觀賞</button>
-
-					<!-- Modal -->
-					<div class="modal fade" id="dialogs2_1" tabindex="-1" role="dialog" aria-labelledby="dialogs2_2" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="dialogs2_2">招生影片</h5>
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					          <span aria-hidden="true">&times;</span>
-					        </button>
-					      </div>
-					      <div class="modal-body">
-					        <iframe width="100%" height="550px" src="https://www.youtube.com/embed/5yb_9c6AP8w?html5=1" frameborder="0"></iframe>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-			<!-- course -->
-			<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-				<img class="card-img-top" src="./img/course.jpg" height="250px">
-				<div class="card-body">
-					<h1 class="m-0">社課時間</h1>
-					<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs3_1">馬上了解</button>
-
-					<!-- Modal -->
-					<div class="modal fade" id="dialogs3_1" tabindex="-1" role="dialog" aria-labelledby="dialogs3_2" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="dialogs3_2">最近一次社課時間</h5>
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					          <span aria-hidden="true">&times;</span>
-					        </button>
-					      </div>
-					      <div class="modal-body text-left">
-					      	<p>鑒於 去年度的檢討</p>
-					      	<p>本學期的社課改為 讀書會 - 分組 之形式</p>
-					      	<p>使 新生 能選擇 更多有興趣之領域</p>
-					      	<p>並帶領社員 從基礎 走向 專案</p>
-					      	<p>另外 本社團加開基礎課程 - python</p>
-					      	<p>讓零基礎的新生能夠更快速地入門</p>
-					      	<hr class="teadateHr" />	
-					        <p>時間: 9/25</p>
-					        <p>地點: </p>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- About Us -->
-	<div>
-		<div class="content1">
-			<div class="all">
-				<div class="widthSize1 img">
-					<!-- the picture -->
-					<a href="AboutUs.html">
-						<img class="InheritImg About" src="img/NPC.jpg">
-					</a>
-				</div>
-				<div class="widthSize2 text">
-					<div class="row m-0">
-						<div class="col-8 offset-2">
-							<h1>About Us</h1>
-							<p>
-								為了使更多人能夠體會程式的魅力，我們致力於北科校園推廣資訊技術，開設不同語言的課程。<br>
-								不僅如此，更加開基礎課程，讓初學者能夠更快速地上手。<br>
-								同時，我們也有 讀書會分組形式 的社課，讓社員能夠團隊合作，並在最後進入專案的開發。<br>
-								對程式有興趣的你，趕快加入我們的夢想藍圖吧！</p>
+				<!-- information -->
+				<div class="container-fluid p-5" id="information">
+					<h1>活動搶先看</h1>
+					<hr class="titleHr"/>
+					<div class="text-center">
+						<!-- tea -->
+						<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
+							<img class="card-img-top" src="./img/tea.jpg" height="250px">
+							<div class="card-body">
+								<h1 class="m-0">新生茶會</h1>
+								<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs1_1">了解更多</button>
+								<!-- Modal -->
+								<div class="modal fade" id="dialogs1_1" tabindex="-1" role="dialog" aria-labelledby="dialogs1_2" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="dialogs1_2">新生茶會</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body text-left">
+												<p>
+													Hey! 聽說...<br>
+													你還在猶豫要參加哪個社團嗎？<br>
+													想要踏入程式領域卻覺得自學難以入門嗎？<br>
+													沒關係！那就來我們的新生茶會，<br>
+													一起了解 北科程式設計研究社 到底都在做些什麼事情吧！<br>
+												</p>
+												<hr class="teadateHr mb-5">
+												<p>日期：107/9/18 (Tue.)</p>
+												<p>入場時間：p.m. 6:00 - 6:30</p>
+												<p>開始時間：p.m. 6:30</p>
+												<p>地點：目前未定</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- video -->
+						<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
+							<img class="card-img-top" src="./img/video.png" height="250px">
+							<div class="card-body">
+								<h1 class="m-0">招生影片</h1>
+								<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs2_1">立即觀賞</button>
+								<!-- Modal -->
+								<div class="modal fade" id="dialogs2_1" tabindex="-1" role="dialog" aria-labelledby="dialogs2_2" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="dialogs2_2">招生影片</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<iframe width="100%" height="550px" src="https://www.youtube.com/embed/5yb_9c6AP8w?html5=1" frameborder="0"></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- course -->
+						<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
+							<img class="card-img-top" src="./img/course.jpg" height="250px">
+							<div class="card-body">
+								<h1 class="m-0">社課時間</h1>
+								<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs3_1">馬上了解</button>
+								<!-- Modal -->
+								<div class="modal fade" id="dialogs3_1" tabindex="-1" role="dialog" aria-labelledby="dialogs3_2" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="dialogs3_2">最近一次社課時間</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body text-left">
+												<p>鑒於 去年度的檢討</p>
+												<p>本學期的社課改為 讀書會 - 分組 之形式</p>
+												<p>使 新生 能選擇 更多有興趣之領域</p>
+												<p>並帶領社員 從基礎 走向 專案</p>
+												<p>另外 本社團加開基礎課程 - python</p>
+												<p>讓零基礎的新生能夠更快速地入門</p>
+												<hr class="teadateHr" />
+												<p>時間: 9/25</p>
+												<p>地點: </p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="content2">
-			<div class="all">
-				<div class="img">
-					<a href="AboutUs.html">
-						<img class="InheritImg About" src="img/NPC.jpg">
-					</a>
-				</div>
-				<div class="text mt-5">
-					<div class="row m-0">
-						<div class="col-10 offset-1 text-center">
-							<h1 class="mt-2">About Us</h1>
-							<p class="mb-5 text-left">
-								為了使更多人能夠體會程式的魅力，我們致力於北科校園推廣資訊技術，開設不同語言的課程。<br>
-								不僅如此，更加開基礎課程，讓初學者能夠更快速地上手。<br>
-								同時，我們也有 讀書會分組形式 的社課，讓社員能夠團隊合作，並在最後進入專案的開發。<br>
-								對程式有興趣的你，趕快加入我們的夢想藍圖吧！
-							</p>
+				<!-- About Us -->
+				<div>
+					<div class="content1">
+						<div class="all">
+							<div class="widthSize1 img">
+								<!-- the picture -->
+								<a href="AboutUs.html">
+									<img class="InheritImg About" src="img/NPC.jpg">
+								</a>
+							</div>
+							<div class="widthSize2 text mt-2">
+								<div class="row m-0">
+									<div class="col-8 offset-2">
+										<h2>About Us</h2>
+										<p>
+											為了使更多人能夠體會程式的魅力，我們致力於北科校園推廣資訊技術，開設不同語言的課程。<br>
+											不僅如此，更加開基礎課程，讓初學者能夠更快速地上手，同時，我們也有讀書會分組形式的社課，讓社員能夠團隊合作，並在最後進入專案的開發。<br>
+										對程式有興趣的你，趕快加入我們的夢想藍圖吧！</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content2">
+						<div class="all">
+							<div class="img">
+								<a href="AboutUs.html">
+									<img class="InheritImg About" src="img/NPC.jpg">
+								</a>
+							</div>
+							<div class="text mt-5">
+								<div class="row m-0">
+									<div class="col-10 offset-1 text-center">
+										<h1 class="mt-2 mb-2">About Us</h1>
+										<p class="mb-5 text-left">
+											為了使更多人能夠體會程式的魅力，我們致力於北科校園推廣資訊技術，開設不同語言的課程。<br>
+											不僅如此，更加開基礎課程，讓初學者能夠更快速地上手。<br>
+											同時，我們也有 讀書會分組形式 的社課，讓社員能夠團隊合作，並在最後進入專案的開發。<br>
+											對程式有興趣的你，趕快加入我們的夢想藍圖吧！
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Project -->
-	<div id="Project">
-		<div class="content1">
-			<div class="all">
-				<div class="widthSize2 text">
-					<div class="row m-0">
-						<div class="col-6 offset-3">
-							<h1>Project</h1>
-							<p>
-								所有社員在期末前都會做出屬於自己的專案,並存放在 GitHub 上。<br>
-								GitHub 是一個 全世界最大的開源程式碼社群，同時也可以做版本控制，種種因素使得 GitHub 為全球帶來百億商機。<br>
-								未來也極有可能是 IT人 的考核之一。
-							</p>
+				<!-- Project -->
+				<div id="Project">
+					<div class="content1">
+						<div class="all">
+							<div class="widthSize2 text">
+								<div class="row m-0">
+									<div class="col-8 offset-2">
+										<h2>Project</h2>
+										<p>
+											所有社員在期末前都會做出屬於自己的專案,並存放在 GitHub 上。<br>
+											GitHub 是一個 全世界最大的開源程式碼社群，同時也可以做版本控制，種種因素使得 GitHub 為全球帶來百億商機。<br>
+											未來也極有可能是 IT人 的考核之一。
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="widthSize1 img">
+								<!-- the picture -->
+								<a href="Project.html">
+									<img class="InheritImg Project" src="img/Project.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="content2">
+						<div class="all">
+							<div class="img w-100">
+								<!-- the picture -->
+								<a href="Project.html">
+									<img class="InheritImg Project" src="img/CourseContent.jpg">
+								</a>
+							</div>
+							<div class="text mt-5">
+								<div class="row m-0">
+									<div class="col-10 offset-1 text-center">
+										<h1 class="mt-2">Project</h1>
+										<p class="text-left mb-5">所有社員在期末前都會做出屬於自己的專案,並存放在 GithHub 上。<br>
+											GitHub 是一個 全世界最大的開源程式碼社群，同時也可以做版本控制，種種因素使得 GitHub 為全球帶來百億商機。<br>
+										未來也極有可能是 IT人 的考核之一。</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="widthSize1 img">
-					<!-- the picture -->
-					<a href="Project.html">
-						<img class="InheritImg Project" src="img/Project.jpg">
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="content2">
-			<div class="all">
-				<div class="img w-100">
-					<!-- the picture -->
-					<a href="Project.html">
-						<img class="InheritImg Project" src="img/Project.jpg">
-					</a>
-				</div>
-				<div class="text mt-5">
-					<div class="row m-0">
-						<div class="col-10 offset-1 text-center">
-							<h1 class="mt-2">Project</h1>
-							<p class="text-left mb-5">所有社員在期末前都會做出屬於自己的專案,並存放在 GithHub 上。<br>
-								GitHub 是一個 全世界最大的開源程式碼社群，同時也可以做版本控制，種種因素使得 GitHub 為全球帶來百億商機。<br>
-								未來也極有可能是 IT人 的考核之一。</p>
+				<!-- Course -->
+				<div id="Course">
+					<div class="content1">
+						<div class="all">
+							<div class="widthSize1 img">
+								<!-- the picture -->
+								<a href="Course.html">
+									<img class="InheritImg Course" src="img/CourseContent.jpg">
+								</a>
+							</div>
+							<div class="widthSize2 text">
+								<div class="row m-0">
+									<div class="col-8 offset-2">
+										<h2>Course</h2>
+										<p>學習程式，並不是為了成為「程式設計師」，而是為了開拓更寬廣的學習途徑</p>
+										<p class="float-right">——— Mitch Resnick</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content2">
+						<div class="all">
+							<div class="img w-100">
+								<!-- the picture -->
+								<a href="Course.html">
+									<img class="InheritImg Course" src="img/CourseContent.jpg">
+								</a>
+							</div>
+							<div class="text mt-5">
+								<div class="row m-0">
+									<div class="col-10 offset-1 text-center">
+										<h1 class="mt-2">Course</h1>
+										<p class="text-left">學習程式，並不是為了成為「程式設計師」，而是為了開拓更寬廣的學習途徑</p>
+										<p class="float-right mb-5">——— Mitch Resnick</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Course -->
-	<div id="Course">
-		<div class="content1">
-			<div class="all">
-				<div class="widthSize1 img">
-					<!-- the picture -->
-					<a href="Course.html">
-						<img class="InheritImg Course" src="img/Course.png">
-					</a>
-				</div>
-				<div class="widthSize2 text">
-					<div class="row m-0">
-						<div class="col-6 offset-3">
-							<h1>Course</h1>
-							<p>學習程式，並不是為了成為「程式設計師」，而是為了開拓更寬廣的學習途徑</p>
-							<p class="float-right">——— Mitch Resnick</p>
-						</div>
+				<!-- contact -->
+				<div id="contact" class="p-3">
+					<div class="ContactLink text-center">
+						<h1>Follow Us</h1>
+						<button class="mybtn" value="Facebook">Facebook</button>
+						<button class="mybtn" value="CTF">NPC CTF</button>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="content2">
-			<div class="all">
-				<div class="img w-100">
-					<!-- the picture -->
-					<a href="Course.html">
-						<img class="InheritImg Course" src="img/Course.png">
-					</a>
-				</div>
-				<div class="text mt-5">
-				<div class="row m-0">
-					<div class="col-10 offset-1 text-center">
-						<h1 class="mt-2">Course</h1>
-						<p class="text-left">學習程式，並不是為了成為「程式設計師」，而是為了開拓更寬廣的學習途徑</p>
-						<p class="float-right mb-5">——— Mitch Resnick</p>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	</div>
-	<!-- contact -->
-	<div id="contact" class="p-3">
-		<div class="ContactLink text-center">
-			<h1>Follow Us</h1>
-			<button class="mybtn" value="Facebook">Facebook</button>
-			<button class="mybtn" value="CTF">NPC CTF</button>
-		</div>
-	</div>
-	<footer>
-		<p class="m-0" style="font-size: 0.9em">&copy; 2018 by NTUT Programming Club</p>
-	</footer>
-
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-	 crossorigin="anonymous"></script>
-	<!-- parallax.js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-	<!-- my script -->
-	<script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
-	<script src="js/main.min.js"></script>
-
-</body>
-</html>
+				<footer>
+					<p class="m-0" style="font-size: 0.9em">&copy; 2018 by NTUT Programming Club</p>
+				</footer>
+				<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+				crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+				crossorigin="anonymous"></script>
+				<!-- parallax.js -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+				<!-- my script -->
+				<script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
+				<script src="js/main.min.js"></script>
+			</body>
+		</html>

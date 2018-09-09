@@ -14,10 +14,32 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	</head>
 	<script type="text/javascript">
+	var preWidth = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
 	function refresh() {
-	setTimeout(function() {
-	location.reload();
-	}, 100);
+	var newWidth = window.innerWidth
+	var judgeNew;
+	var judgePre;
+	function judgeWidth (Width) {
+		if (Width >= 900) {
+			return "A";
+		} else if (newWidth > 700 && newWidth < 900) {
+			return "B";
+		} else if (newWidth < 550 && newWidth >= 700) {
+			return "C";
+		} else {
+			return "D";
+		}
+	}
+	
+	judgeNew = judgeWidth(newWidth);
+	judgePre = judgeWidth(preWidth);
+	
+	if (judgeNew != judgePre) {
+		location.reload();
+	}
+	preWidth = newWidth;
 	}
 	</script>
 	<body onresize="refresh()">
