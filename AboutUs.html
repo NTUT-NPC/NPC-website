@@ -10,67 +10,37 @@
 		<link rel="stylesheet" type="text/css" href="style/AboutUs.min.css">
 		<link rel="stylesheet" type="text/css" href="style/button.min.css">
 	</head>
-	<script type="text/javascript">
-	var preWidth = window.innerWidth
-	|| document.documentElement.clientWidth
-	|| document.body.clientWidth;
-	function refresh() {
-	var newWidth = window.innerWidth
-	var judgeNew;
-	var judgePre;
-	function judgeWidth (Width) {
-		if (Width >= 900) {
-			return "A";
-		} else if (newWidth > 700 && newWidth < 900) {
-			return "B";
-		} else if (newWidth < 550 && newWidth >= 700) {
-			return "C";
-		} else {
-			return "D";
-		}
-	}
-	
-	judgeNew = judgeWidth(newWidth);
-	judgePre = judgeWidth(preWidth);
-	
-	if (judgeNew != judgePre) {
-		location.reload();
-	}
-	preWidth = newWidth;
-	}
-	</script>
-	<body onresize="refresh()">
-		<div class="parallax-window" data-parallax="scroll" data-image-src="img/Attach_RWD.jpg">
-			<nav class="navbar navbar-default navbar-expand-md fixed-top" style="background-color: #000">
-				<div class="container">
-					<a class="navbar-brand" href="./index.html">
-						<img src="img/logo.png" width="50px">
-					</a>
-					<!-- Hamburger button-->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<!-- humburger Menu -->
-					<div class="collapse navbar-collapse" id="navbarItem">
-						<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
-							<li class="nav-item text-center">
-								<a class="nav-link" href="index.html"">Home</a>
-							</li>
-							<li class="nav-item active text-center">
-								<a class="nav-link" href="AboutUs.html">About us</a>
-							</li>
-							<!-- use dropdown Menu -->
-							<li class="nav-item text-center">
-								<a class="nav-link" href="Project.html">Project</a>
-							</li>
-							<li class="nav-item text-center">
-								<a class="nav-link" href="Course.html">Course</a>
-							</li>
-						</ul>
-					</div>
+	<body>
+		<nav class="navbar navbar-default navbar-expand-md fixed-top" style="background-color: #000">
+			<div class="container">
+				<a class="navbar-brand" href="./index.html">
+					<img src="img/logo.png" width="50px">
+				</a>
+				<!-- Hamburger button-->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- humburger Menu -->
+				<div class="collapse navbar-collapse" id="navbarItem">
+					<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
+						<li class="nav-item text-center">
+							<a class="nav-link" href="index.html"">Home</a>
+						</li>
+						<li class="nav-item active text-center">
+							<a class="nav-link" href="AboutUs.html">About us</a>
+						</li>
+						<!-- use dropdown Menu -->
+						<li class="nav-item text-center">
+							<a class="nav-link" href="Project.html">Project</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="Course.html">Course</a>
+						</li>
+					</ul>
 				</div>
-			</nav>
-		</div>
+			</div>
+		</nav>
+		<div style="height: 76px; background-color: white;"></div>
 		<!-- About -->
 		<div class="pt-5">
 			<div class="commission AboutContent m-0">
@@ -100,7 +70,7 @@
 				<div class="container-fluid mt-3 px-3" id="organizers">
 					<h1>社團幹部</h1>
 					<hr class="mb-5 organizersHr" />
-					<div class="text-center">
+					<div class="textPosition">
 						<div class="number_img text-center">
 							<img class="img-thumbnail img imgRWD" src="img/organizers/fourseasonred.jpg" style="border-radius: 50%">
 							<p class="p-0">陳季宏</p>

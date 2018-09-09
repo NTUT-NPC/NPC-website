@@ -11,175 +11,82 @@
 		<link rel="stylesheet" type="text/css" href="style/Project.min.css">
 		<link rel="stylesheet" type="text/css" href="style/AboutUs.min.css">
 	</head>
-	<script type="text/javascript">
-	var preWidth = window.innerWidth
-	|| document.documentElement.clientWidth
-	|| document.body.clientWidth;
-	function refresh() {
-	var newWidth = window.innerWidth
-	var judgeNew;
-	var judgePre;
-	function judgeWidth (Width) {
-		if (Width >= 900) {
-			return "A";
-		} else if (newWidth > 700 && newWidth < 900) {
-			return "B";
-		} else if (newWidth < 550 && newWidth >= 700) {
-			return "C";
-		} else {
-			return "D";
-		}
-	}
-	
-	judgeNew = judgeWidth(newWidth);
-	judgePre = judgeWidth(preWidth);
-	
-	if (judgeNew != judgePre) {
-		location.reload();
-	}
-	preWidth = newWidth;
-	}
-	</script>
-	<body onresize="refresh()">
-		<div class="parallax-window" data-parallax="scroll" data-image-src="img/Attach_RWD.jpg">
-			<nav class="navbar navbar-default navbar-expand-lg fixed-top" style="background-color: #000">
-				<div class="container">
-					<a class="navbar-brand" href="index.html">
-						<img src="img/logo.png" width="50px">
-					</a>
-					<!-- Hamburger button-->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<!-- humburger Menu -->
-					<div class="collapse navbar-collapse" id="navbarItem">
-						<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
-							<li class="nav-item text-center">
-								<a class="nav-link" href="index.html"">Home</a>
-							</li>
-							<li class="nav-item text-center">
-								<a class="nav-link" href="AboutUs.html">About us</a>
-							</li>
-							<!-- use dropdown Menu -->
-							<li class="nav-item active text-center">
-								<a class="nav-link" href="Project.html">Project</a>
-							</li>
-							<li class="nav-item text-center">
-								<a class="nav-link" href="Course.html">Course</a>
-							</li>
-						</ul>
-					</div>
+	<body>
+		<nav class="navbar navbar-default navbar-expand-md fixed-top" style="background-color: #000">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="img/logo.png" width="50px">
+				</a>
+				<!-- Hamburger button-->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItem" aria-controls="navbarItem" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- humburger Menu -->
+				<div class="collapse navbar-collapse" id="navbarItem">
+					<ul class="nav navbar-nav mr-auto LineBorder ml-auto">
+						<li class="nav-item text-center">
+							<a class="nav-link" href="index.html"">Home</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="AboutUs.html">About us</a>
+						</li>
+						<!-- use dropdown Menu -->
+						<li class="nav-item active text-center">
+							<a class="nav-link" href="Project.html">Project</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="Course.html">Course</a>
+						</li>
+					</ul>
 				</div>
-			</nav>
-		</div>
+			</div>
+		</nav>
+		<div style="height: 76px; background-color: white;"></div>
 		<!-- Project -->
-		<div class="container-fluid p-5" id="information">
-			<div class="text-center">
-				<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-					<img class="card-img-top" src="./img/html.png" height="250px">
+		<div class="container-fluid p-5 text-center" id="informationProject">
+			<div class="mx-2" style="display: inline-block;">
+				<div class="card mt-5" style="background-color: #fff; width: 300px;">
+					<img class="card-img-top" src="./img/logo.png">
 					<div class="card-body">
-						<h1 class="m-0 text-center">NPC - website</h1>
-						<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs1_1">了解更多</button>
-						<!-- Modal -->
-						<div class="modal fade" id="dialogs1_1" tabindex="-1" role="dialog" aria-labelledby="dialogs1_2" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="dialogs1_2">社團網站 - GitHub</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body text-left">
-										<hr class="teadateHr">
-										<img src="img/NPC-website.png">
-										<hr class="teadateHr_invert">
-										<p class="pt-2"><a href="https://github.com/darkfanxing/NPC-website">- NPC 社團網站 -</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
+						<h3 class="m-0 text-center">NPC website</h3>
+						<a href="https://github.com/darkfanxing/NPC-website" target="_blank">
+							<button type="button" class="btn btn-info float-right my-3 mr-3">了解更多</button>
+						</a>
 					</div>
 				</div>
-				<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-					<img class="card-img-top" src="./img/python.png" height="250px">
-					<div class="card-body">
-						<h1 class="m-0 text-center">Line bot</h1>
-						<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs2_1">了解更多</button>
-						<!-- Modal -->
-						<div class="modal fade" id="dialogs2_1" tabindex="-1" role="dialog" aria-labelledby="dialogs2_2" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="dialogs2_2">Line bot</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										<hr class="teadateHr">
-										<img src="img/line-bot.png">
-										<hr class="teadateHr_invert">
-										<p class="pt-2"><a href="https://github.com/yaoandy107/line-bot-tutorial">- The Line bot tutorial -</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+			</div>
+			<div class="mx-2" style="display: inline-block;">
+				<div class="card mt-5" style="background-color: #fff; width: 300px;">
+				<img class="card-img-top" src="./img/line-bot.png">
+				<div class="card-body">
+					<h3 class="m-0 text-center">Line bot</h3>
+					<a href="https://github.com/yaoandy107/line-bot-tutorial" target="_blank">
+						<button type="button" class="btn btn-info float-right my-3 mr-3">了解更多</button>
+					</a>
 				</div>
-				<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-					<img class="card-img-top" src="./img/Unity.png" height="250px">
-					<div class="card-body">
-						<h1 class="m-0 text-center">Unity 3D game</h1>
-						<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs3_1">了解更多</button>
-						<!-- Modal -->
-						<div class="modal fade" id="dialogs3_1" tabindex="-1" role="dialog" aria-labelledby="dialogs3_2" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="dialogs3_2">Unity 3D game</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										<hr class="teadateHr">
-										<img src="img/Unity-3D-game.png">
-										<hr class="teadateHr_invert">
-										<p class="pt-2"><a href="Unity3D/windows/index.html">- Windows -</a></p>
-										<p><a href="Unity3D/MAC/._index.html">- Mac -</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+			</div>
+			</div>
+			<div class="mx-2" style="display: inline-block;">
+				<div class="card mt-5" style="background-color: #fff; width: 300px;">
+				<img class="card-img-top" src="./img/Unity-3D-game.png">
+				<div class="card-body">
+					<h3 class="m-0 text-center">3D Game</h3>
+					<a href="Unity3D/MAC/._index.html" target="_blank">
+						<button type="button" class="btn btn-info float-right my-3 mr-3">了解更多</button>
+					</a>
 				</div>
-				<div class="card mt-5 ml-5" style="display: inline-block; width: 25vw; background-color: #fff;">
-					<img class="card-img-top" src="./img/Android.png" height="250px">
-					<div class="card-body">
-						<h1 class="m-0 text-center">T.T.S. APP</h1>
-						<button type="button" class="btn btn-info float-right my-3" data-toggle="modal" data-target="#dialogs4_1">了解更多</button>
-						<!-- Modal -->
-						<div class="modal fade" id="dialogs4_1" tabindex="-1" role="dialog" aria-labelledby="dialogs4_2" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered dialog-w" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="dialogs4_2">T.T.S. 北科學生 APP</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										<hr class="teadateHr">
-										<img src="img/TTS.png">
-										<hr class="teadateHr_invert">
-										<p class="pt-2"><a href="Unity3D/windows/index.html"> T.T.S. opensource</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+			</div>
+			</div>
+			<div class="mx-2" style="display: inline-block;">
+				<div class="card mt-5" style="background-color: #fff; width: 300px;">
+				<img class="card-img-top" src="./img/Android.png" height="250px">
+				<div class="card-body">
+					<h3 class="m-0 text-center">T.T.S. APP</h3>
+					<a href="Unity3D/windows/index.html" target="_blank">
+						<button type="button" class="btn btn-info float-right my-3 mr-3">了解更多</button>
+					</a>
 				</div>
+			</div>
 			</div>
 		</div>
 		
@@ -202,6 +109,6 @@
 		<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 		<!-- my script -->
 		<script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
-		<script src="js/main.min.js"></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
