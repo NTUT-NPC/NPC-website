@@ -11,25 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="style/index.min.css">
 		<link rel="stylesheet" type="text/css" href="style/button.min.css">
 	</head>
-	<script>
-	var tag = document.createElement('script');
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	var player;
-	function onYouTubeIframeAPIReady() {
-	player = new YT.Player('ytplayer', {
-	events: {
-	'onReady': onPlayerReady
-	}
-	});
-	}
-	function onPlayerReady() {
-	player.playVideo();
-	// Mute!
-	player.mute();
-	}
-	</script>
+	
 	<body>
 		<!-- the navigation -->
 		<nav class="navbar navbar-default navbar-expand-md navBlack fixed-top">
@@ -70,6 +52,24 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			var player;
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('ytplayer', {
+				events: {
+					'onReady': onPlayerReady
+				}});
+			}
+			function onPlayerReady() {
+			player.playVideo();
+			// Mute!
+			player.mute();
+			}
+		</script>
 		<!-- information -->
 		<div class="container-fluid p-5" id="information">
 			<h1>活動搶先看</h1>
@@ -311,7 +311,6 @@
 		<footer>
 			<p class="m-0" style="font-size: 0.9em">&copy; 2018 by NTUT Programming Club</p>
 		</footer>
-
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
