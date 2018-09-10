@@ -11,7 +11,24 @@
 		<link rel="stylesheet" type="text/css" href="style/index.min.css">
 		<link rel="stylesheet" type="text/css" href="style/button.min.css">
 	</head>
-	
+	<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('ytplayer', {
+			events: {
+				'onReady': onPlayerReady
+			}});
+		}
+		function onPlayerReady() {
+			player.playVideo();
+		// Mute!
+			player.mute();
+		}
+	</script>
 	<body>
 		<!-- the navigation -->
 		<nav class="navbar navbar-default navbar-expand-md navBlack fixed-top">
@@ -52,24 +69,6 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			var tag = document.createElement('script');
-			tag.src = "https://www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-			var player;
-			function onYouTubeIframeAPIReady() {
-				player = new YT.Player('ytplayer', {
-				events: {
-					'onReady': onPlayerReady
-				}});
-			}
-			function onPlayerReady() {
-			player.playVideo();
-			// Mute!
-			player.mute();
-			}
-		</script>
 		<!-- information -->
 		<div class="container-fluid p-5" id="information">
 			<h1>活動搶先看</h1>
